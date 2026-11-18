@@ -63,7 +63,7 @@ function exemple4()
 	let lesCartes = document.getElementsByTagName("li");
 
 	for(let i = 0; i < lesCartes.length; i++){
-		lesCartes[i].className = "carreau" + (6 - i)
+		lesCartes[i].className = "carreau" + (6 - i);
 	}
 }
 
@@ -74,37 +74,70 @@ function exemple5()
 	let lesCartes = document.getElementsByTagName("li");
 
 	for(let i = 0; i < lesCartes.length; i++){
-		lesCartes[i].className = "trefle" + (i + 1)
+		lesCartes[i].className = "trefle" + ((i * 2) + 1);
 	}
 }
 //=================================================================
 function exemple6()
 {   
 	retirerLesClasses();
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		lesCartes[i].className = "carreau" + ((i % 3) + 1);
+	}
 }
 
 //=================================================================
 function exemple7()
 {   
 	retirerLesClasses();
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		if(i % 2 === 0){
+			lesCartes[i].className = "pique" + (i + 1);
+		}
+		else{
+			lesCartes[i].className = "coeur" + (i + 1);
+		}
+	}
 }
 
 //=================================================================
 function exemple8()
 {   
 	retirerLesClasses();
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		lesCartes[i].className = "carreau" + (randNumber(13) + 1);
+	}
 }
 
 //=================================================================
 function exemple9()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+	let randomCarte = randNumber(8) + 1;
+
+	for(let i = 0; i < lesCartes.length; i++){
+		lesCartes[i].className = "pique" + (i + randomCarte);
+	}
 }
 
 //=================================================================
 function exemple10()
 {   
 	retirerLesClasses();
+
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 0; i < lesCartes.length; i++){
+		lesCartes[i].className = tabSortes[randNumber(tabSortes.length)] + (randNumber(13) + 1);
+	}
 }
 
 
